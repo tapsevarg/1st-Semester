@@ -1,3 +1,2 @@
-Function Main
-    Output "Hello world!"
-End
+// "Hello world!" revised to "Hello Patrick Graves!"
+Display "Hello Patrick Graves!"
