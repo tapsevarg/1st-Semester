@@ -1,0 +1,20 @@
+// This is a program that calculates age measured in seconds, minutes, hours, days, and months
+Declare Integer age
+Declare Integer seconds
+Declare Integer minutes
+Declare Integer hours
+Declare Integer days
+Declare Integer months
+
+Display "How many years old are you?"
+Input age
+Set seconds = age * 31536000
+Set minutes = age * 525600
+Set hours = age * 8760
+Set days = age * 365
+Set months = age * 12
+Display "You have existed for more than ", seconds, " seconds."
+Display "... ", minutes, " minutes"
+Display "... ", hours, " hours"
+Display "... ", days, " days"
+Display "... ", months, " months"

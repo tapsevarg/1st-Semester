@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="tapse"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-09-01 10:43:20 PM"/>
+        <attribute name="created" value="dGFwc2U7REVTS1RPUC1DMEdTNkJROzIwMTktMDktMDE7MTA6MDE6MjggUE07Mjg3Mg=="/>
+        <attribute name="edited" value="dGFwc2U7REVTS1RPUC1DMEdTNkJROzIwMTktMDktMDE7MTA6NDM6MjAgUE07MzsyOTgw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a program that calculates age measured in seconds, minutes, hours, days, and months"/>
+            <declare name="Age" type="Integer" array="False" size=""/>
+            <declare name="Seconds" type="Integer" array="False" size=""/>
+            <declare name="Minutes" type="Integer" array="False" size=""/>
+            <declare name="Hours" type="Integer" array="False" size=""/>
+            <declare name="Days" type="Integer" array="False" size=""/>
+            <declare name="Months" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many years old are you?&quot;" newline="True"/>
+            <input variable="Age"/>
+            <assign variable="Seconds" expression="Age*31536000"/>
+            <assign variable="Minutes" expression="Age*525600"/>
+            <assign variable="Hours" expression="Age*8760"/>
+            <assign variable="Days" expression="Age*365"/>
+            <assign variable="Months" expression="Age*12"/>
+            <output expression="&quot;You have existed for more than &quot; &amp; Seconds &amp; &quot; seconds.&quot;" newline="True"/>
+            <output expression="&quot;... &quot; &amp; Minutes &amp; &quot; minutes&quot;" newline="True"/>
+            <output expression="&quot;... &quot; &amp; Hours &amp; &quot; hours&quot;" newline="True"/>
+            <output expression="&quot;... &quot; &amp; Days &amp; &quot; days&quot;" newline="True"/>
+            <output expression="&quot;... &quot; &amp; Months &amp; &quot; months&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
