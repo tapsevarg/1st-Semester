@@ -4,26 +4,26 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="tapse"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2019-09-01 09:47:45 PM"/>
+        <attribute name="saved" value="2019-09-01 11:23:21 PM"/>
         <attribute name="created" value="dGFwc2U7REVTS1RPUC1DMEdTNkJROzIwMTktMDktMDE7MDg6MzI6MjYgUE07Mjg4MQ=="/>
-        <attribute name="edited" value="dGFwc2U7REVTS1RPUC1DMEdTNkJROzIwMTktMDktMDE7MDk6NDc6NDUgUE07MzsyOTk5"/>
+        <attribute name="edited" value="dGFwc2U7REVTS1RPUC1DMEdTNkJROzIwMTktMDktMDE7MTE6MjM6MjEgUE07NDsyOTgx"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="This program is a calculator to extrapolate weekly, monthly, and yearly gross pay"/>
             <declare name="Hours" type="Real" array="False" size=""/>
-            <declare name="Payrate" type="Real" array="False" size=""/>
+            <declare name="Pay" type="Real" array="False" size=""/>
             <declare name="Weekly" type="String" array="False" size=""/>
             <declare name="Monthly" type="String" array="False" size=""/>
             <declare name="Yearly" type="String" array="False" size=""/>
             <output expression="&quot;Enter hours worked during week&quot;" newline="True"/>
             <input variable="Hours"/>
-            <output expression="&quot;Enter payrate&quot;" newline="True"/>
-            <input variable="Payrate"/>
-            <assign variable="Weekly" expression="Tofixed(Hours*Payrate,2)"/>
-            <assign variable="Monthly" expression="ToFixed(Hours*Payrate*4.333333333333333,2)"/>
-            <assign variable="Yearly" expression="ToFixed(Hours*Payrate*52,2)"/>
+            <output expression="&quot;Enter rate of pay&quot;" newline="True"/>
+            <input variable="Pay"/>
+            <assign variable="Weekly" expression="Tofixed(Hours*Pay,2)"/>
+            <assign variable="Monthly" expression="ToFixed(Hours*Pay*4.333333333333333,2)"/>
+            <assign variable="Yearly" expression="ToFixed(Hours*Pay*52,2)"/>
             <output expression="&quot;Weekly gross pay is $&quot; &amp; Weekly" newline="True"/>
             <output expression="&quot;Monthly gross pay is $&quot; &amp; Monthly" newline="True"/>
             <output expression="&quot;Yearly gross pay is $&quot; &amp; Yearly" newline="True"/>
