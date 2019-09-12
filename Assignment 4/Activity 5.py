@@ -1,5 +1,5 @@
-# This is a program to calculate the area of a rectangular room when ordering flooring.
-    
+# This program calculates the area of a rectangular room for ordering flooring.
+
 print("Enter length of room measured in feet")
 length = float(input())
 print("Enter width of room measured in feet")
