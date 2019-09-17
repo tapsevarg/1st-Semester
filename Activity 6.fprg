@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="tapse"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-09-16 08:10:08 PM"/>
+        <attribute name="created" value="dGFwc2U7REVTS1RPUC1DMEdTNkJROzIwMTktMDktMTY7MDM6NTg6MzIgUE07Mjg4Nw=="/>
+        <attribute name="edited" value="dGFwc2U7REVTS1RPUC1DMEdTNkJROzIwMTktMDktMTY7MDg6MTA6MDggUE07NDsyOTk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a program to determine paint needs for a square room."/>
+            <declare name="Length" type="Real" array="False" size=""/>
+            <declare name="Width" type="Real" array="False" size=""/>
+            <declare name="Height" type="Real" array="False" size=""/>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <declare name="Area" type="Real" array="False" size=""/>
+            <declare name="PaintCoverage" type="Real" array="False" size=""/>
+            <declare name="Paint" type="Real" array="False" size=""/>
+            <declare name="Cost" type="Real" array="False" size=""/>
+            <assign variable="Length" expression="GetRoomLength&#13;&#10;()"/>
+            <assign variable="Width" expression="GetRoomWidth&#13;&#10;()"/>
+            <assign variable="Height" expression="GetRoomHeight&#13;&#10;()"/>
+            <assign variable="PaintCoverage" expression="GetPaintCoverage&#13;&#10;()"/>
+            <assign variable="Price" expression="GetPrice&#13;&#10;()"/>
+            <assign variable="Area" expression="CalculateArea&#13;&#10;(Length, Width, Height)"/>
+            <assign variable="Paint" expression="CalculatePaint&#13;&#10;(Area, PaintCoverage)"/>
+            <assign variable="Cost" expression="CalculateCost&#13;&#10;(Paint, Price)"/>
+            <call expression="DisplayResults(Cost, Paint)"/>
+        </body>
+    </function>
+    <function name="CalculateArea" type="Real" variable="Area">
+        <parameters>
+            <parameter name="Length" type="Real" array="False"/>
+            <parameter name="Width" type="Real" array="False"/>
+            <parameter name="Height" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Area" type="Real" array="False" size=""/>
+            <assign variable="Area" expression="2 * Length * Height + 2 * Width * Height"/>
+        </body>
+    </function>
+    <function name="CalculateCost" type="Real" variable="Cost">
+        <parameters>
+            <parameter name="Paint" type="Real" array="False"/>
+            <parameter name="Price" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Cost" type="Real" array="False" size=""/>
+            <assign variable="Cost" expression="(Paint * Price)"/>
+        </body>
+    </function>
+    <function name="CalculatePaint" type="Integer" variable="Paint">
+        <parameters>
+            <parameter name="Area" type="Real" array="False"/>
+            <parameter name="Coverage" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="Paint" type="Real" array="False" size=""/>
+            <assign variable="Paint" expression="(Area / Coverage + 0.9999)"/>
+        </body>
+    </function>
+    <function name="DisplayResults" type="None" variable="DisplayResults">
+        <parameters>
+            <parameter name="Cost" type="Real" array="False"/>
+            <parameter name="Paint" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="(&quot;You need &quot; &amp; Paint &amp; &quot; gallon(s) of paint, which will cost $&quot; &amp; Cost &amp; &quot;.&quot;)" newline="True"/>
+        </body>
+    </function>
+    <function name="GetPaintCoverage" type="Real" variable="Coverage">
+        <parameters/>
+        <body>
+            <declare name="Coverage" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter number of square feet that a gallon of paint will cover&quot;" newline="True"/>
+            <input variable="Coverage"/>
+        </body>
+    </function>
+    <function name="GetPrice" type="Real" variable="Price">
+        <parameters/>
+        <body>
+            <declare name="Price" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter price of the paint&quot;" newline="True"/>
+            <input variable="Price"/>
+        </body>
+    </function>
+    <function name="GetRoomHeight" type="Real" variable="Height">
+        <parameters/>
+        <body>
+            <declare name="Height" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the height of the room&quot;" newline="True"/>
+            <input variable="Height"/>
+        </body>
+    </function>
+    <function name="GetRoomLength" type="Real" variable="Length">
+        <parameters/>
+        <body>
+            <declare name="Length" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the length of the room&quot;" newline="True"/>
+            <input variable="Length"/>
+        </body>
+    </function>
+    <function name="GetRoomWidth" type="Real" variable="Width">
+        <parameters/>
+        <body>
+            <declare name="Width" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the width of the room&quot;" newline="True"/>
+            <input variable="Width"/>
+        </body>
+    </function>
+</flowgorithm>

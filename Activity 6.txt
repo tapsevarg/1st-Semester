@@ -1,0 +1,94 @@
+Module main()
+    // This is a program to determine paint needs for a square room.
+    Declare Real var_length
+    Declare Real width
+    Declare Real height
+    Declare Real price
+    Declare Real area
+    Declare Real paintCoverage
+    Declare Real paint
+    Declare Real cost
+    
+    Set var_length = getRoomLength()
+    Set width = getRoomWidth()
+    Set height = getRoomHeight()
+    Set paintCoverage = getPaintCoverage()
+    Set price = getPrice()
+    Set area = calculateArea(var_length, width, height)
+    Set paint = calculatePaint(area, paintCoverage)
+    Set cost = calculateCost(paint, price)
+    Call displayResults(cost, paint)
+End Module
+
+Function Real calculateArea (Real var_length, Real width, Real height)
+    Declare Real area
+    
+    Set area = 2 * var_length * height + 2 * width * height
+    
+    Return area
+End Function
+
+Function Real calculateCost (Real paint, Real price)
+    Declare Real cost
+    
+    Set cost = paint * price
+    
+    Return cost
+End Function
+
+Function Integer calculatePaint (Real area, Real coverage)
+    Declare Real paint
+    
+    Set paint = area / coverage + 0.9999
+    
+    Return paint
+End Function
+
+Module displayResults (Real cost, Integer paint)
+    Display "You need ", paint, " gallon(s) of paint, which will cost $", cost, "."
+End Module
+
+Function Real getPaintCoverage ()
+    Declare Real coverage
+    
+    Display "Enter number of square feet that a gallon of paint will cover"
+    Input coverage
+    
+    Return coverage
+End Function
+
+Function Real getPrice ()
+    Declare Real price
+    
+    Display "Enter price of the paint"
+    Input price
+    
+    Return price
+End Function
+
+Function Real getRoomHeight ()
+    Declare Real height
+    
+    Display "Enter the height of the room"
+    Input height
+    
+    Return height
+End Function
+
+Function Real getRoomLength ()
+    Declare Real var_length
+    
+    Display "Enter the length of the room"
+    Input var_length
+    
+    Return var_length
+End Function
+
+Function Real getRoomWidth ()
+    Declare Real width
+    
+    Display "Enter the width of the room"
+    Input width
+    
+    Return width
+End Function
