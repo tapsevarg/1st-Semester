@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Administrator"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-09-30 01:33:36 AM"/>
+        <attribute name="created" value="QWRtaW5pc3RyYXRvcjtXSU4tUThOQUJGTUJSQzY7MjAxOS0wOS0yOTsxMDo0NjoyNSBQTTszNzE2"/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtXSU4tUThOQUJGTUJSQzY7MjAxOS0wOS0zMDswMTozMzozNiBBTTs2OzM4MDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a program to calculate sock size"/>
+            <declare name="shoes" type="Real" array="False" size=""/>
+            <assign variable="shoes" expression="GetShoes()"/>
+            <if expression="shoes &lt; 4">
+                <then>
+                    <call expression="DisplayXsmall()"/>
+                </then>
+                <else>
+                    <if expression="shoes &lt;= 6">
+                        <then>
+                            <call expression="DisplaySmall()"/>
+                        </then>
+                        <else>
+                            <if expression="shoes &lt;= 9">
+                                <then>
+                                    <call expression="DisplayMedium()"/>
+                                </then>
+                                <else>
+                                    <if expression="shoes &lt;=12">
+                                        <then>
+                                            <call expression="DisplayLarge()"/>
+                                        </then>
+                                        <else>
+                                            <call expression="DisplayXlarge()"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="DisplayLarge" type="None" variable="Large">
+        <parameters/>
+        <body>
+            <output expression="&quot;Buy size large socks.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="DisplayMedium" type="None" variable="Medium">
+        <parameters/>
+        <body>
+            <output expression="&quot;Buy size medium socks.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="DisplaySmall" type="None" variable="small">
+        <parameters/>
+        <body>
+            <output expression="&quot;Buy size small socks.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="DisplayXlarge" type="None" variable="Xlarge">
+        <parameters/>
+        <body>
+            <output expression="&quot;Buy size extra large socks.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="DisplayXsmall" type="None" variable="Xsmall">
+        <parameters/>
+        <body>
+            <output expression="&quot;Buy size extra small socks.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="GetShoes" type="Real" variable="shoes">
+        <parameters/>
+        <body>
+            <declare name="shoes" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter shoe size&quot;" newline="True"/>
+            <input variable="shoes"/>
+        </body>
+    </function>
+</flowgorithm>
