@@ -10,8 +10,7 @@ def get_age():
 
 def get_choice():
     print("Choose measure of time to convert age to: " +
-          "press S for age is seconds, " +
-          "M for minutes, H for hours, " +
+          "press S for age is seconds, H for hours, " +
           "D for days, and M for months.")
     choice = input()
     return choice
@@ -20,11 +19,6 @@ def get_choice():
 def calculate_seconds(age):
     seconds = (age) * 31536000
     return seconds
-
-
-def calculate_minutes(age):
-    minutes = (age) * 525600
-    return minutes
 
 
 def calculate_hours(age):
@@ -47,24 +41,19 @@ def display_seconds(seconds):
           str(seconds) + " seconds")
 
 
-def display_minutes(minutes):
-    print("You have existed for more than " +
-          str(minutes) + (" minutes")
-
-
 def display_hours(hours):
     print("You have existed for more than " +
-          str(hours) + (" hours")
+          str(hours) + " hours")
 
 
 def display_days(days):
     print("You have existed for more than " +
-          str(days) + (" days")
+          str(days) + " days")
 
 
 def display_months(months):
     print("You have existed for more than " +
-          str(months) + (" months")
+          str(months) + " months")
 
 
 def main():
@@ -73,9 +62,6 @@ def main():
     if choice == "S" or choice == "s":
         seconds = calculate_seconds(age)
         display_seconds(seconds)
-    elif choice == "M" or choice == "m":
-        minutes = calculate_minutes(age)
-        display_minutes(minutes)
     elif choice == "H" or choice == "h":
         hours = calculate_hours(age)
         display_hours(hours)
