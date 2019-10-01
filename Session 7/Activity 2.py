@@ -72,7 +72,7 @@ def main():
         months = calculate_months(age)
         display_months(months)
     else:
-        null
+        print("Please choose one of the assigned key options")
 
 
 main()
