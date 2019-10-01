@@ -14,3 +14,6 @@ Session 5: I didn't follow the directions correctly for this week's homework. I 
 
 
 Session 6: I changed my folder nomenclature from assignments to sessions. I didn't like using similar words of assignments and activities. I went ahead and changed all of my previous activities to use functions for inputs, processing, and output. I've gotten more comfortable with functions as a result. Hopefully that will benefit me in the future.
+
+
+Session 7: I created a new activity 5 starting with Flowgorithm. Afterwards, I cleaned up the Flowgorithm Python code. I also updated my age converter to include if/else functionality. I'm barely keeping my head above water, in my opinion. Flowgorithm is a pain, nothing new there. I had found writing code in Python less painful, but I spent numerous hours tracking down little mistakes for my age converter. I haven't put all the dots together yet and hopefully that happens sooner than later.
