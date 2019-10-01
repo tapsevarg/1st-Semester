@@ -1,47 +1,47 @@
 # This is a program to calculate sock size
 
 
-def getShoes():
+def get_shoes():
     print("Please enter shoe size")
     shoes = float(input())
     return shoes
 
 
-def displayXsmall():
+def display_xsmall():
     print("Buy size extra small socks.")
 
 
-def displaySmall():
+def display_small():
     print("Buy size small socks.")
 
 
-def displayMedium():
+def display_medium():
     print("Buy size medium socks.")
 
 
-def displayLarge():
+def display_large():
     print("Buy size large socks.")
 
 
-def displayXlarge():
+def display_xlarge():
     print("Buy size extra large socks.")
 
 
 def main():
-    shoes = getShoes()
+    shoes = get_shoes()
     if shoes < 4:
-        displayXsmall()
+        display_xsmall()
     else:
         if shoes <= 6:
-            displaySmall()
+            display_small()
         else:
             if shoes <= 9:
-                displayMedium()
+                display_medium()
             else:
                 if shoes <= 12:
-                    displayLarge()
+                    display_large()
                 else:
-                    displayXlarge()
+                    display_xlarge()
 
 
 main()
