@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Administrator"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-06 03:12:58 PM"/>
+        <attribute name="created" value="QWRtaW5pc3RyYXRvcjtXSU4tUThOQUJGTUJSQzY7MjAxOS0xMC0wNjswOTozNDoyOCBBTTszNjk2"/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtXSU4tUThOQUJGTUJSQzY7MjAxOS0xMC0wNjswMzoxMjo1OCBQTTs2OzM4MTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a program to automate averaging student's exam scores."/>
+            <declare name="students" type="Integer" array="False" size=""/>
+            <declare name="score" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="students" expression="inputStudents()"/>
+            <assign variable="total" expression="inputScores(students)"/>
+            <call expression="processAverage(total, students)"/>
+        </body>
+    </function>
+    <function name="inputScores" type="Integer" variable="total">
+        <parameters>
+            <parameter name="students" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="score" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <while expression="students &gt; 0">
+                <output expression="&quot;Enter score&quot;" newline="True"/>
+                <input variable="score"/>
+                <assign variable="total" expression="total + score"/>
+                <assign variable="students" expression="students - 1"/>
+            </while>
+        </body>
+    </function>
+    <function name="inputStudents" type="Integer" variable="students">
+        <parameters/>
+        <body>
+            <declare name="students" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter total number of exams to average and press enter&quot;" newline="True"/>
+            <input variable="students"/>
+        </body>
+    </function>
+    <function name="processAverage" type="Real" variable="average">
+        <parameters>
+            <parameter name="total" type="Integer" array="False"/>
+            <parameter name="students" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="average" type="Real" array="False" size=""/>
+            <assign variable="average" expression="total / students"/>
+            <output expression="&quot;The class average is &quot; &amp; average &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
