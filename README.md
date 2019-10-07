@@ -17,3 +17,5 @@ Session 6: I changed my folder nomenclature from assignments to sessions. I didn
 
 
 Session 7: I created a new activity 5 starting with Flowgorithm. Afterwards, I cleaned up the Flowgorithm Python code. I also updated my age converter to include if/else functionality. I'm barely keeping my head above water, in my opinion. Flowgorithm is a pain, nothing new there. I had found writing code in Python less painful, but I spent numerous hours tracking down little mistakes for my age converter. I haven't put all the dots together yet and hopefully that happens sooner than later.
+
+Session 8: At the risk of sounding repetitive, Flowgorithm gave me problems again. I don't know whether the cause is a logical disconnect, the syntax, lack of tutorials, or other. The difference in time spent on Flowgorithm and coding in Python is night and day.  After a while, I figured out it was better to pump out source python code and take that into an IDE to debug. That worked well. From now on, I will take Flowgorithm problems to an IDE for debugging.
