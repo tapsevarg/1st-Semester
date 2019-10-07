@@ -1,4 +1,4 @@
-# This is an interactive program for multiplication tables.
+# This is a program for creating multiplication tables.
 
 
 def get_value():
