@@ -1,0 +1,48 @@
+Module main()
+    // This is a program to automate averaging student's exam scores.
+    Declare Real average
+    Declare Integer students
+    Declare Integer score
+    Declare Integer total
+    
+    Set students = inputStudents()
+    Set total = inputScores(students)
+    Set average = processAverage(total, students)
+    Call outputAverage(average)
+End Module
+
+Function Integer inputScores (Integer students)
+    Declare Integer score
+    Declare Integer total
+    
+    Set total = 0
+    While students > 0
+        Display "Enter score"
+        Input score
+        Set total = total + score
+        Set students = students - 1
+    End While
+    
+    Return total
+End Function
+
+Function Integer inputStudents ()
+    Declare Integer students
+    
+    Display "Enter total number of exams to average and press enter"
+    Input students
+    
+    Return students
+End Function
+
+Module outputAverage (Real average)
+    Display "The average test score is ", average, "."
+End Module
+
+Function Real processAverage (Integer total, Integer students)
+    Declare Real average
+    
+    Set average = total / students
+    
+    Return average
+End Function
