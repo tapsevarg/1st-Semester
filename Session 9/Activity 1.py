@@ -14,10 +14,6 @@ def input_scores():
         except ValueError:
             break
         total = total + int(student)
-    return (total, count)
-
-
-def process_scores(total, count):
     average = total / count
     return average
 
@@ -27,8 +23,7 @@ def output_scores(average):
 
 
 def main():
-    total, count = input_scores()
-    average = process_scores(total, count)
+    average = input_scores()
     output_scores(average)
 
 
