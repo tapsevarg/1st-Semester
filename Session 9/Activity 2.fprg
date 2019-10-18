@@ -72,7 +72,7 @@
                     </else>
                 </if>
                 <assign variable="count" expression="count + 1"/>
-                <assign variable="bouncer" expression="bouncer * 0.5"/>
+                <assign variable="bouncer" expression="int(bouncer * 0.5)"/>
             </do>
         </body>
     </function>
