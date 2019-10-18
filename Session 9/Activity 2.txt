@@ -47,7 +47,7 @@ Function Integer processGuess ()
             End If
         End If
         Set count = count + 1
-        Set bouncer = bouncer * 0.5
+        Set bouncer = int(bouncer * 0.5)
     While response == "H" OR response == "h" OR response == "L" OR response == "l"
     
     Return count
