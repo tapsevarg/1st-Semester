@@ -28,7 +28,7 @@ def processGuess():
                 else:
                     print("please press one of the key options")
         count = count + 1
-        bouncer = bouncer * 0.5
+        bouncer = int(bouncer * 0.5)
         if not(response == "H" or response == "h" or response == "L" or response == "l"): break   #Exit loop
     
     return count
