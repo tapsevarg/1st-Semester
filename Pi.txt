@@ -1,0 +1,51 @@
+Module main()
+    // This is a Nilakantha Pi calculator
+    Declare Real nilakantha
+    Declare Integer iterations
+    
+    Set iterations = inputIterations()
+    Call processNilakantha(iterations)
+    Call outputNilakantha()
+End Module
+
+Function Integer inputIterations ()
+    Declare Integer iterations
+    
+    Display "How many iterations of Pi would you like me to calculate?"
+    Input iterations
+    
+    Return iterations
+End Function
+
+Module outputNilakantha ()
+    Display "Have a nice day!"
+End Module
+
+Module processNilakantha (Integer iterations)
+    Declare Integer count
+    Declare Real nilakantha
+    Declare Real factorA
+    Declare Real factorB
+    Declare Real factorC
+    Declare Real factors
+    
+    Set count = 1
+    Set factorA = 0
+    Set factorB = 1
+    Set factorC = 2
+    Set nilakantha = 3
+    Display nilakantha
+    For count = 2 To iterations
+        Set factorA = factorA + 2
+        Set factorB = factorB + 2
+        Set factorC = factorC + 2
+        Set factors = factorA * factorB * factorC
+        If count MOD 2 < 1 Then
+            Set nilakantha = nilakantha + 4 / factors
+            Display nilakantha
+        Else
+            Set nilakantha = nilakantha - 4 / factors
+            Display nilakantha
+        End If
+    End For
+End Module

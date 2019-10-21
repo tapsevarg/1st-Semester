@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Administrator"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-20 10:12:52 PM"/>
+        <attribute name="created" value="QWRtaW5pc3RyYXRvcjtXSU4tNURNNVBKSjBSVDg7MjAxOS0xMC0yMDswNzoxMjoyNCBQTTszNjg0"/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtXSU4tNURNNVBKSjBSVDg7MjAxOS0xMC0yMDsxMDoxMjo1MiBQTTszOzM3ODk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This is a Nilakantha Pi calculator"/>
+            <declare name="nilakantha" type="Real" array="False" size=""/>
+            <declare name="iterations" type="Integer" array="False" size=""/>
+            <assign variable="iterations" expression="inputIterations()"/>
+            <call expression="processNilakantha(iterations)"/>
+            <call expression="outputNilakantha"/>
+        </body>
+    </function>
+    <function name="inputIterations" type="Integer" variable="iterations">
+        <parameters/>
+        <body>
+            <declare name="iterations" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many iterations of Pi would you like me to calculate?&quot;" newline="True"/>
+            <input variable="iterations"/>
+        </body>
+    </function>
+    <function name="outputNilakantha" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Have a nice day!&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="processNilakantha" type="None" variable="">
+        <parameters>
+            <parameter name="iterations" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <declare name="nilakantha" type="Real" array="False" size=""/>
+            <declare name="factorA" type="Real" array="False" size=""/>
+            <declare name="factorB" type="Real" array="False" size=""/>
+            <declare name="factorC" type="Real" array="False" size=""/>
+            <declare name="factors" type="Real" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <assign variable="factorA" expression="0"/>
+            <assign variable="factorB" expression="1"/>
+            <assign variable="factorC" expression="2"/>
+            <assign variable="nilakantha" expression="3"/>
+            <output expression="nilakantha" newline="True"/>
+            <for variable="count" start="2" end="(iterations)" direction="inc" step="1">
+                <assign variable="factorA" expression="FactorA + 2"/>
+                <assign variable="factorB" expression="FactorB + 2"/>
+                <assign variable="factorC" expression="FactorC + 2"/>
+                <assign variable="factors" expression="factorA * factorB * factorC"/>
+                <if expression="count % 2 &lt; 1">
+                    <then>
+                        <assign variable="nilakantha" expression="nilakantha + 4 / factors"/>
+                        <output expression="nilakantha" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="nilakantha" expression="nilakantha - 4 / factors"/>
+                        <output expression="nilakantha" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
