@@ -1,0 +1,34 @@
+# This is a multiplication tables program
+
+
+def input_a():
+    print("For multiplication table \n")
+    print("Please enter lower number in range")
+    value_a = int(input())
+    return value_a
+
+
+def input_b():
+    print("Please enter higher number in range")
+    value_b = int(input())
+    return value_b
+
+
+def process_values(value_a, value_b):
+    for columns in range(value_a, value_b + 1):
+        print(columns, end="\t")
+    print("\n")
+    for rows in range(value_a, value_b + 1):
+        print(rows, end="\t")
+        for count in range(value_a, value_b):
+            print(rows * (count + 1), end="\t")
+        print("\n")
+
+
+def main():
+    value_a = input_a()
+    value_b = input_b()
+    process_values(value_a, value_b)
+
+
+main()
