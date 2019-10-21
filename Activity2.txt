@@ -1,0 +1,54 @@
+Module main()
+    Declare Integer count
+    
+    Call inputStart()
+    Set count = processGuess()
+    Call outputResults(count)
+End Module
+
+Module inputStart ()
+    Declare String start
+    
+    Do
+        Display "Think of a number between 0-100, then press enter"
+        Input start
+    While start != ""
+End Module
+
+Module outputResults (Integer count)
+    Display "It took me ", count, " attempts to guess your number."
+End Module
+
+Function Integer processGuess ()
+    Declare String response
+    Declare Integer guess
+    Declare Integer bouncer
+    Declare Integer count
+    
+    Set guess = 50
+    Set bouncer = 25
+    Set count = 1
+    Do
+        Display "Is your number ", guess, "?"
+        Display "Press 'H' key if your number is higher"
+        Display "Press 'L' key if your number is lower"
+        Display "Press 'E' key if I guessed your number correctly"
+        Input response
+        If response == "E" OR response == "e" Then
+        Else
+            If response == "H" OR response == "h" Then
+                Set guess = guess + bouncer + 1
+            Else
+                If response == "L" OR response == "l" Then
+                    Set guess = guess - bouncer - 1
+                Else
+                    Display "please press one of the key options"
+                End If
+            End If
+        End If
+        Set count = count + 1
+        Set bouncer = bouncer * 0.5
+    While response == "H" OR response == "h" OR response == "L" OR response == "l"
+    
+    Return count
+End Function

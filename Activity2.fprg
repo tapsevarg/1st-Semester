@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Administrator"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2019-10-17 09:21:49 PM"/>
+        <attribute name="saved" value="2019-10-17 04:58:55 AM"/>
         <attribute name="created" value="QWRtaW5pc3RyYXRvcjtXSU4tNURNNVBKSjBSVDg7MjAxOS0xMC0xNDswNDowMTo1MSBBTTszNjY3"/>
-        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtXSU4tNURNNVBKSjBSVDg7MjAxOS0xMC0xNzswOToyMTo0OSBQTTs5OzM4MTU="/>
+        <attribute name="edited" value="QWRtaW5pc3RyYXRvcjtXSU4tNURNNVBKSjBSVDg7MjAxOS0xMC0xNzswNDo1ODo1NSBBTTs4OzM4MDE="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -72,7 +72,7 @@
                     </else>
                 </if>
                 <assign variable="count" expression="count + 1"/>
-                <assign variable="bouncer" expression="int(bouncer * 0.5)"/>
+                <assign variable="bouncer" expression="bouncer * 0.5"/>
             </do>
         </body>
     </function>
