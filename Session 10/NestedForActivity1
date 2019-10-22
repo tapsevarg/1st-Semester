@@ -15,13 +15,14 @@ def input_b():
 
 
 def process_values(value_a, value_b):
+    print("\t", end="")
     for columns in range(value_a, value_b + 1):
         print(columns, end="\t")
     print("\n")
     for rows in range(value_a, value_b + 1):
         print(rows, end="\t")
-        for count in range(value_a, value_b):
-            print(rows * (count + 1), end="\t")
+        for count in range(value_a, value_b + 1):
+            print(rows * (count), end="\t")
         print("\n")
 
 
