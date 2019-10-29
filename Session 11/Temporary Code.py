@@ -10,6 +10,7 @@ def build_doors():
     random.shuffle(doors)
     return doors
 
+
 def generate_choice(doors):
     choice = random.choice(doors)
     return choice
@@ -22,5 +23,7 @@ def process_game(doors, choice):
     else:
         loser +=1
 
+        
 doors = build_doors()
 choice = generate_choice(doors)
+scorecard = process_game(doors, choice)
