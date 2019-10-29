@@ -26,5 +26,4 @@ Session 10: The "for activity 3" was smoother sailing than much of last week. Th
 
 Session 11: My activity V1 did not follow the guidelines of the assignment. I got pretty far into coding before realizing how different it would be. I was skeptical of the Montey Hall math. So I created a version that allows for human input. It wasn't until I got to the output where it made sense. I had to figure out how to factor the switch, which seemed difficult. In reality, it was easy (100 - matches) and that was required for the math to sink in a bit, though my brain still tries to creep back over. If this is ok, I'll probably do a V2 with the project identically following instructions. The following resources helped:
 https://www.tutorialspoint.com/python/list_count.htm
-
 https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
