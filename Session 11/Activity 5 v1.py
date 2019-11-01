@@ -1,4 +1,12 @@
-# This program is a Monty Hall problem simulator
+# This is an automated Monty Hall problem solver
+
+
+import random
+
+
+def hide_prize(doors):
+    prize = random.choice(doors)
+    return prize
 
 
 def input_guess():
@@ -9,14 +17,19 @@ def input_guess():
     while(guess != "1" and guess != "2" and guess != "3"):
         print("Valid choices are 1 through 3, then hit enter.")
         guess = input()
+    guess = int(guess) - 1
     return guess
 
 
-def process_doors(guess):
-    import random
-    cars = [random.randint(1, 3) for tests in range(101)]
-    matches = cars.count(int(guess))
-    return matches
+def test_samples1(guess):
+    winners1 = 0
+    doors1 = ["door 1", "door 2", "door 3"]
+    guess = doors1[guess]
+    for count1 in range(0, 100, 1):
+        prize = hide_prize(doors1)
+        if prize is guess:
+            winners1 += 1
+    return winners1
 
 
 def input_switch():
@@ -35,20 +48,52 @@ def input_switch():
     return choice
 
 
-def output_results(matches, choice):
-    if choice == 0:
-        print("You picked the correct door:")
-        print(matches, "times out of 100 chances.")
-    else:
-        print("By switching, your choice matched the correct door")
-        print((100 - matches), "times out of 100 chances.")
+def output_stand(winners1):
+    print("You picked the correct door:")
+    print(winners1, " times out of 100.")
+
+
+def test_samples2(guess):
+    winners2 = 0
+    doors2 = ["door 1", "door 2", "door 3"]
+    guess = doors2[guess]
+    for count in range(0, 100, 1):
+        prize = hide_prize(doors2)
+        if doors2[0] is not prize and doors2[0] is not guess:
+            if guess is doors2[1]:
+                guess = doors2[2]
+            else:
+                guess = doors2[1]
+        elif doors2[1] is not prize and doors2[1] is not guess:
+            if guess is doors2[0]:
+                guess = doors2[2]
+            else:
+                guess = doors2[0]
+        else:
+            if guess is doors2[0]:
+                guess = doors2[1]
+            else:
+                guess = doors2[0]
+        if prize is guess:
+            winners2 += 1
+    return winners2
+
+
+def output_switch(winners2):
+    print("By swapping after a goat is eliminated," +
+          " the correct door is picked:")
+    print(winners2, " times out of 100.")
 
 
 def main():
     guess = input_guess()
-    matches = process_doors(guess)
+    winners1 = test_samples1(guess)
     choice = input_switch()
-    output_results(matches, choice)
+    if choice == 0:
+        output_stand(winners1)
+    else:
+        winners2 = test_samples2(guess)
+        output_switch(winners2)
 
 
 main()
