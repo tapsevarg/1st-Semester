@@ -16,36 +16,38 @@ def input_scores():
             break
         scores.append(student)
     return scores
-    
-    
+
+
 def process_average(scores):
     total = 0
     for index in range(len(scores)):
         total += scores[index]
     average = total/(len(scores))
     return average
-    
-    
+
+
 def process_maximum(scores):
     maximum = max(scores)
     return maximum
-    
-    
+
+
 def process_minimum(scores):
     minimum = min(scores)
     return minimum
-        
-        
+
+
 def process_sort(scores):
     scores.sort(reverse=True)
+    scores = str(scores)[1: -1]
     return scores
 
 
-def output_grades(average, maximum, minimum, scores):
-    print("The grades are as follows: " + str(', '.join(scores))
-    print("The average score is " + str(average) + ".")
-    print("The highest grade was " + str(maximum) + 
+def output_grades(scores, average, maximum, minimum):
+    print("The grades are as follows: " + (scores) + ".")
+    print("The average score is " + str(int(average)) + ".")
+    print("The highest grade was " + str(maximum) +
           " and the lowest was " + str(minimum) + ".")
+
 
 def main():
     scores = input_scores()
@@ -53,7 +55,7 @@ def main():
     maximum = process_maximum(scores)
     minimum = process_minimum(scores)
     scores = process_sort(scores)
-    output_grades(average, maximum, minimum, scores)
+    output_grades(scores, average, maximum, minimum)
 
 
 main()
