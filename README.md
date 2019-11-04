@@ -28,3 +28,4 @@ Session 11: So I changed things up a bit. I think I nailed down the v2 automated
 https://www.tutorialspoint.com/python/list_count.htm
 https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
 
+Session 12: I'm taking advantage of work that I did in the past. The dynamic grade averager is retrofitted with the newly requested funcitonality, including: dynamic array, high, low, average, and sort. It was still a bunch of work and had to figure out all the little things along the way too. These sources helped: https://www.geeksforgeeks.org/python-list-sort/, https://www.tutorialspoint.com/python/list_max.htm, and https://www.daniweb.com/programming/software-development/threads/173615/how-to-write-list-to-file-without-brackets. 
