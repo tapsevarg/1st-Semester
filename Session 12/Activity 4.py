@@ -40,6 +40,7 @@ def process_guess():
 def output_results(history):
     print("It took me " + str(len(history)) +
           " attempts to guess your number.")
+    print("Here were my guesses: " + str(history)[1: -1] + ".")
 
 
 def main():
