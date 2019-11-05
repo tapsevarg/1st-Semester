@@ -11,27 +11,24 @@ def input_start():
 
 def process_guess():
     history = []
-    guess = 50
-    bouncer = 25
+    low = 0
+    high = 100
     while True:
-        guess = min(max(guess, 0), 100)
-        bouncer = min(max(bouncer, 1), 100)
+        guess = (low + high) // 2
+        history.append(guess)
+
         print("Is your number " + str(guess) + "?")
         print("Press 'H' key if your number is higher")
         print("Press 'L' key if your number is lower")
         print("Press 'E' key if I guessed your number correctly")
         response = input()
+
         if response == "E" or response == "e":
-            history.append(guess)
             break
         elif response == "H" or response == "h":
-            history.append(guess)
-            guess = int(guess + bouncer)
-            bouncer = (bouncer * 0.5)
+            low = guess + 1
         elif response == "L" or response == "l":
-            history.append(guess)
-            guess = int(guess - bouncer)
-            bouncer = (bouncer * 0.5)
+            high = guess - 1
         else:
             print("Let's try again")
     return history
