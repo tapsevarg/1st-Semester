@@ -16,13 +16,11 @@ def process_guess():
     while True:
         guess = (low + high) // 2
         history.append(guess)
-
         print("Is your number " + str(guess) + "?")
         print("Press 'H' key if your number is higher")
         print("Press 'L' key if your number is lower")
         print("Press 'E' key if I guessed your number correctly")
         response = input()
-
         if response == "E" or response == "e":
             break
         elif response == "H" or response == "h":
