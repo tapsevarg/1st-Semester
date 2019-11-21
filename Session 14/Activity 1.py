@@ -1,4 +1,4 @@
-# This is a program to prcoess test scores from a file
+# This is a program to process test scores from a file
 
 import os.path
 from os import path
