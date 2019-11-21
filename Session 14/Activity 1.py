@@ -1,3 +1,5 @@
+#This is a program to prcoess test scores from a file
+
 import sys
 
 
@@ -12,12 +14,35 @@ def input_file():
     except:
         print("Error reading scores.txt")
         print(sys.exc_info()[1])
-    print(grades)
+    return grades
+
 
 def process_file(grades):
-    
-    count = 0
-    for 
+    numbers = []
+    for each in grades:
+        numbers.append(each[1])
+    return numbers
 
-grades = input_file()
-process_file(grades)
+
+def process_high(numbers):
+
+
+def process_low(numbers):
+
+
+def process_average(numbers):
+
+
+def output_scores(numbers, best, worst, middlest)
+
+
+def main():
+    grades = input_file()
+    numbers = process_file(grades)
+    best = process_high(numbers)
+    worst = process_low(numbers)
+    middlest = process_average(numbers)
+    output_scores(numbers, best, worst, middlest
+
+
+main()
