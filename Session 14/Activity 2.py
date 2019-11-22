@@ -1,4 +1,5 @@
 # This is a program to process test scores from a file
+# with built in error handling.
 
 import os.path
 from os import path
@@ -29,12 +30,11 @@ def process_file(grades):
         each = each.split(",")
         numbers.append(each[1])
         try:
-            value = int(numbers[0])
+            numbers = [int(convert) for convert in numbers]
         except:
-            print("Scores issue data")
+            print("Expected score value is not numeric")
             print(sys.exc_info()[1])
-            break
-        numbers = [int(i) for i in numbers] 
+            sys.exit()
     return numbers
 
 
