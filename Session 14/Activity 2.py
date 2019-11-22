@@ -10,10 +10,14 @@ def input_file():
     grades = []
     try:
         with open("scores.txt", "r") as file:
-            next(file)
-            for line in file:
-                line = line.strip()
-                grades.append(line)
+            first = file.readline()
+            if any(char.isdigit() for char in first):
+                print("Error with header")
+                sys.exit()
+            else:
+                for line in file:
+                    line = line.strip()
+                    grades.append(line)
     except:
         print("Error reading scores.txt")
         print(sys.exc_info()[1])
