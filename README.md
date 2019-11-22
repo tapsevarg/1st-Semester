@@ -32,7 +32,10 @@ Session 12: I'm taking advantage of work that I did in the past. The dynamic gra
 
 Session 13: I took the easier activities this week. Technically, I spent some time trying to cobble together activity 1. But I realized that I could not figure out a way to account for names like Jean Claude Van Damme or George Bernard Shaw. Regardless, the other two activities gave me a chance to get comfortable with some old concepts and new concepts. The following websites were used as a resource: https://www.programiz.com/python-programming/methods/string/strip, https://stackoverflow.com/questions/7844118/how-to-convert-comma-delimited-string-to-list-in-python, https://stackoverflow.com/questions/13443588/how-can-i-format-a-list-to-print-each-element-on-a-separate-line-in-python and https://www.codespeedy.com/how-to-remove-null-values-from-list-in-python/.
 
-Session 14: So this week was a nightmare. I am completley reliant on Pythontutor showing me what's happeneing lini-by-line. Furthermore, I have a rudiementary understanding of coding at best and it got exposed severely this week. I am using a for loop for everything and I see no issue with it. The entire interenet could be listed as a resource this week, as I spent countless hours doing fruitless searches. The pivotal references include:
+Session 14: So this week was a nightmare. I am completley reliant on Pythontutor showing me what's happening line-by-line. Furthermore, my limited knowledge/skills got exposed severely this week. I originally created a hybrid between assignment 1/2 and attempted activity 3. I spent plenty of time trying, but I could not complete activity 3. So I made separate activity 1 and 2 files instead. The entire internet could be listed as a resource this week. The pivotal references include:
 https://www.guru99.com/python-check-if-file-exists.html
 https://www.w3schools.com/python/ref_file_close.asp
 https://www.geeksforgeeks.org/find-average-list-python/
+https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
+https://stackoverflow.com/questions/3225305/how-to-check-if-an-element-of-a-list-is-a-number
+https://stackoverflow.com/questions/2462566/python-break-outside-loop
