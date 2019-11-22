@@ -27,7 +27,14 @@ def process_file(grades):
     numbers = []
     for each in grades:
         each = each.split(",")
-        numbers.append(int(each[1]))
+        numbers.append(each[1])
+        try:
+            value = int(numbers[0])
+        except:
+            print("Scores issue data")
+            print(sys.exc_info()[1])
+            break
+        numbers = [int(i) for i in numbers] 
     return numbers
 
 
