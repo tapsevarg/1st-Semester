@@ -61,7 +61,7 @@ def output_scores(grades, maximum, minimum, middle):
 
 
 def main():
-    if path.exists("scores.txt"):
+    if path.exists("scores.txt") and os.path.getsize("scores.txt") > 0:
         grades = input_file()
         numbers = process_file(grades)
         maximum = process_high(numbers)
@@ -69,7 +69,7 @@ def main():
         middle = process_average(numbers)
         output_scores(grades, maximum, minimum, middle)
     else:
-        print("Error finding scores.txt file")
+        print("Error finding file or file is empty")
 
 
 main()
