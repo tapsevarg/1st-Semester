@@ -16,7 +16,6 @@ def input_file():
     except:
         print("Error reading scores.txt")
         print(sys.exc_info()[1])
-    file.close()
     return grades
 
 
