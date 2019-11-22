@@ -39,3 +39,4 @@ https://www.geeksforgeeks.org/find-average-list-python/
 https://www.geeksforgeeks.org/python-converting-all-strings-in-list-to-integers/
 https://stackoverflow.com/questions/3225305/how-to-check-if-an-element-of-a-list-is-a-number
 https://stackoverflow.com/questions/2462566/python-break-outside-loop
+https://exceptionshub.com/python-check-whether-a-file-is-empty-or-not.html
