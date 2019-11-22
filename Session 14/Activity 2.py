@@ -28,7 +28,12 @@ def process_file(grades):
     numbers = []
     for each in grades:
         each = each.split(",")
-        numbers.append(each[1])
+        try:
+            numbers.append(each[1])
+        except:
+            print("Error with formatting")
+            print(sys.exc_info()[1])
+            sys.exit()
         try:
             numbers = [int(convert) for convert in numbers]
         except:
