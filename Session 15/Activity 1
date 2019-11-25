@@ -1,0 +1,26 @@
+# This is a class to calculate the area of shapes.
+
+
+class Shapes:
+    classification = plane shape
+   
+
+    def _init_(self, name, area):
+        self.name = name
+        self.area = area
+        import math
+
+
+    def shapeInfo(self):
+        print("The area of the {} is {}.", self.name, self.area) 
+
+
+triangle = ("triangle, .5 × b × h)
+rectangle = ("trapezoid", w × h)
+trapezoid = ("trapezoid", .5 (a + b) × h)
+ellipse = ("ellipse", math.pi * a * b)
+square = ("square", a^2)
+parllelogram = ("parallelogram, b × h)
+circle = ("circle", math.pi × r ^ 2)
+
+
