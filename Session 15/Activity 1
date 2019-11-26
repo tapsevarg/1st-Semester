@@ -12,7 +12,10 @@ class Shapes:
 
 
     def shapeInfo(self):
-        print("The area of the {} is {}.", self.name, self.area) 
+        print("The area of the {} is {}.", self.name, self.area)
+
+
+    def shapeInput():
 
 
 triangle = ("triangle, .5 × b × h)
