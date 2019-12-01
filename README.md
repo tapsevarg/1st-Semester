@@ -42,3 +42,13 @@ https://stackoverflow.com/questions/2462566/python-break-outside-loop
 https://exceptionshub.com/python-check-whether-a-file-is-empty-or-not.html
 https://stackoverflow.com/questions/19859282/check-if-a-string-contains-a-number
 https://stackoverflow.com/questions/1904394/read-only-the-first-line-of-a-file
+
+Sessio 16: 
+
+https://www.edureka.co/blog/python-xml-parser-tutorial/
+https://www.datacamp.com/community/tutorials/python-xml-elementtree
+https://stackoverflow.com/questions/21179272/parsing-a-url-xml-with-the-elementtree-xml-api
+https://pythonspot.com/urllib-tutorial-python-3/
+https://docs.python.org/2/library/xml.etree.elementtree.html
+https://stackoverflow.com/questions/1786476/parsing-xml-in-python-using-elementtree-example
+https://www.geeksforgeeks.org/xml-parsing-python/
