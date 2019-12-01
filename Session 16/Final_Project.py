@@ -11,7 +11,7 @@ def input_xml():
     zones = []
     lights = []
     prices = []
-    availabilities = []
+    avails = []
     url = "https://www.w3schools.com/xml/plant_catalog.xml"
     try:
         page = urllib.request.urlopen(url).read()
@@ -21,8 +21,19 @@ def input_xml():
         exit(1)
     info = xml.etree.ElementTree.fromstring(page)
     data = xml.etree.ElementTree.ElementTree(info)
-    for element in data.iter():
-        print("%s: %s" % (element.tag, element.text))
+    for child in data.iter("COMMON"):
+        commons.append(child.text)
+    for child in data.iter("BOTANICAL"):
+        botanicals.append(child.text)
+    for child in data.iter("ZONE"):
+        zones.append(child.text)
+    for child in data.iter("LIGHT"):
+        lights.append(child.text)
+    for child in data.iter("PRICE"):
+        prices.append(child.text)
+    for child in data.iter("AVAILABILITY"):
+        avails.append(child.text)
+    print(commons, botanicals, zones, lights, prices, avails)
  
 
 input_xml()
