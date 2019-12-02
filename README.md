@@ -52,3 +52,4 @@ https://pythonspot.com/urllib-tutorial-python-3/
 https://docs.python.org/2/library/xml.etree.elementtree.html
 https://stackoverflow.com/questions/1786476/parsing-xml-in-python-using-elementtree-example
 https://www.geeksforgeeks.org/xml-parsing-python/
+https://stackoverflow.com/questions/26190160/how-to-find-length-of-dictionary-values
