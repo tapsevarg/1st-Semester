@@ -20,6 +20,7 @@ def input_xml():
     for child in data.iter("COMMON"):
         source['common'].append(child.text)
     for child in data.iter("BOTANICAL"):
+        
         source['botanical'].append(child.text)
     for child in data.iter("ZONE"):
         source['zone'].append(child.text)
@@ -33,7 +34,9 @@ def input_xml():
  
 
 def test(source):
-  print(source)
+    length_key = len(source['botanical'])
+    print(length_key)
+
 
   
 source = input_xml()
