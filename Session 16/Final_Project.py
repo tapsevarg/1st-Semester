@@ -33,10 +33,9 @@ def input_xml():
  
 
 def test(source):
-    length_key = len(source['botanical'])
-    print(length_key)
+    key_to_value_lengths = {k:len(v) for k, v in source.items()}
+    print(key_to_value_lengths)
 
 
-  
 source = input_xml()
 test(source)
