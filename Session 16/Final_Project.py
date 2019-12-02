@@ -20,7 +20,6 @@ def input_xml():
     for child in data.iter("COMMON"):
         source['common'].append(child.text)
     for child in data.iter("BOTANICAL"):
-        
         source['botanical'].append(child.text)
     for child in data.iter("ZONE"):
         source['zone'].append(child.text)
