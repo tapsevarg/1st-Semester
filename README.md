@@ -54,3 +54,4 @@ https://stackoverflow.com/questions/1786476/parsing-xml-in-python-using-elementt
 https://www.geeksforgeeks.org/xml-parsing-python/
 https://stackoverflow.com/questions/26190160/how-to-find-length-of-dictionary-values
 https://stackoverflow.com/questions/26190160/how-to-find-length-of-dictionary-values/32592327
+https://www.csestack.org/python-check-if-all-elements-in-list-are-same/
