@@ -43,7 +43,7 @@ https://exceptionshub.com/python-check-whether-a-file-is-empty-or-not.html
 https://stackoverflow.com/questions/19859282/check-if-a-string-contains-a-number
 https://stackoverflow.com/questions/1904394/read-only-the-first-line-of-a-file
 
-Sessio 16: 
+Session 16: 
 
 https://www.edureka.co/blog/python-xml-parser-tutorial/
 https://www.datacamp.com/community/tutorials/python-xml-elementtree
@@ -53,3 +53,4 @@ https://docs.python.org/2/library/xml.etree.elementtree.html
 https://stackoverflow.com/questions/1786476/parsing-xml-in-python-using-elementtree-example
 https://www.geeksforgeeks.org/xml-parsing-python/
 https://stackoverflow.com/questions/26190160/how-to-find-length-of-dictionary-values
+https://stackoverflow.com/questions/26190160/how-to-find-length-of-dictionary-values/32592327
