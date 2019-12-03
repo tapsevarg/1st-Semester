@@ -58,3 +58,4 @@ https://www.csestack.org/python-check-if-all-elements-in-list-are-same/
 https://stackoverflow.com/questions/9426045/difference-between-exit0-and-exit1-in-python/9426115
 https://stackoverflow.com/questions/43197594/convert-numbers-in-a-list-of-lists-to-float-in-python
 https://stackoverflow.com/questions/7002429/how-can-i-extract-all-values-from-a-dictionary-in-python
+https://stackoverflow.com/questions/9012503/iterating-through-dictionary-with-list-as-values-in-python
