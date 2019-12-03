@@ -61,3 +61,4 @@ https://stackoverflow.com/questions/7002429/how-can-i-extract-all-values-from-a-
 https://stackoverflow.com/questions/9012503/iterating-through-dictionary-with-list-as-values-in-python
 https://stackoverflow.com/questions/8693867/python-list-replace
 https://stackoverflow.com/questions/54301753/how-to-print-every-nth-index-of-a-python-list-on-a-new-line
+https://stackoverflow.com/questions/59164351/joining-list-with-different-separators-in-python
