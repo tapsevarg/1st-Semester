@@ -41,9 +41,10 @@ def test_xml(source):
 
 
 def output_xml(source, total):
-    keysValue = source.keys()
-    for pack in zip(*source.values()): 
-        print(dict(zip(keysValue, pack)))
+    test = []
+    for key in source.keys():
+        test.append(source[key])
+    print(test)
 
 
 source = input_xml()
