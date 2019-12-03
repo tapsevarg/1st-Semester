@@ -8,7 +8,8 @@ from itertools import zip_longest
 
 
 def input_xml():
-    source = {'common': [], 'botanical': [], 'zone': [], 'light': [], 'price': []}
+    source = {'common': [], 'botanical': [], 'zone': [], 'light': [],
+              'price': []}
     url = "https://www.w3schools.com/xml/plant_catalog.xml"
     try:
         page = urllib.request.urlopen(url).read()
@@ -30,11 +31,16 @@ def input_xml():
     for child in data.iter("PRICE"):
         source['price'].append(child.text)
     return source
- 
+
 
 def test_xml(source):
+    if '' in source:
+        print("Error with values extracted from XML")
+        exit(1)
+    else:
+        pass
     test = [len(v) for v in source.values()]
-    if(len(set(test))==1):
+    if(len(set(test)) == 1):
         total = test[0]
         return total
     else:
@@ -48,7 +54,11 @@ def process_xml(source, total):
         money.append(source[key])
     dollars = (money[4])
     dollars = [peso.replace('$', '').replace(' ', '') for peso in dollars]
-    dollars = np.array(dollars,float)
+    try:
+        dollars = np.array(dollars, float)
+    except:
+        print("Expected dollar value is not numeric")
+        exit(1)
     average = sum(dollars) / len(dollars)
     average = round(average, 2)
     return average
@@ -56,9 +66,9 @@ def process_xml(source, total):
 
 def output_xml(source, total, average):
     output = ([i for t in zip_longest(*[source[k] for k in sorted(source)])
-          for i in t if i is not None])
-    for i in range(0, len(output), 5): 
-        print('{} ({}) - {} - {} - {}'.format(*output[i:i+5])) 
+              for i in t if i is not None])
+    for i in range(0, len(output), 5):
+        print('{} ({}) - {} - {} - {}'.format(*output[i:i+5]))
     print("The total number of items are " + str(total) + ".")
     print("The average price is $" + str(average) + ".")
 
