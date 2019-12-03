@@ -4,6 +4,7 @@
 import urllib.request
 import xml.etree.ElementTree
 import numpy as np
+from itertools import zip_longest
 
 
 def input_xml():
@@ -54,7 +55,11 @@ def process_xml(source, total):
 
 
 def output_xml(source, total, average):
-    tacos = 
+    steps = 5
+    taco = ([i for t in zip_longest(*[source[k] for k in sorted(source)])
+          for i in t if i is not None])
+    for group in zip(*[iter(taco)] * steps):
+        print(' - '.join(str(k) for k in group))
     print("The total number of items are " + str(total) + ".")
     print("The average price is $" + str(average) + ".")
 
