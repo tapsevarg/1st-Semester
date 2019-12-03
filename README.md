@@ -44,7 +44,7 @@ https://stackoverflow.com/questions/19859282/check-if-a-string-contains-a-number
 https://stackoverflow.com/questions/1904394/read-only-the-first-line-of-a-file
 
 Session 16: 
-
+I am very much in the middle of doing this, with a couple of forks still in play. I am not sure that I am doing any aspect correctly, so the feedback likely will make some decisions for me. It's been a ton of work--I don't know if I can truly communicate the full extent. I've had to use new tools along the way, including working with dictionaries. I was spinning my wheels for days prior to finding the Final Project Approaches in the discussion board, which explained the unicode bit and the non-intuitive use of ElementTree.
 https://www.edureka.co/blog/python-xml-parser-tutorial/
 https://www.datacamp.com/community/tutorials/python-xml-elementtree
 https://stackoverflow.com/questions/21179272/parsing-a-url-xml-with-the-elementtree-xml-api
