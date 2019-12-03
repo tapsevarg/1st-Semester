@@ -43,10 +43,10 @@ def test_xml(source):
 
 
 def process_xml(source, total):
-    test = []
+    money = []
     for key in source.keys():
-        test.append(source[key])
-    dollars = (test[4])
+        money.append(source[key])
+    dollars = (money[4])
     dollars = [peso.replace('$', '').replace(' ', '') for peso in dollars]
     dollars = np.array(dollars,float)
     average = sum(dollars) / len(dollars)
@@ -55,11 +55,10 @@ def process_xml(source, total):
 
 
 def output_xml(source, total, average):
-    steps = 5
-    taco = ([i for t in zip_longest(*[source[k] for k in sorted(source)])
+    output = ([i for t in zip_longest(*[source[k] for k in sorted(source)])
           for i in t if i is not None])
-    for group in zip(*[iter(taco)] * steps):
-        print(' - '.join(str(k) for k in group))
+    for i in range(0, len(output), 5): 
+        print('{} ({}) - {} - {} - {}'.format(*output[i:i+5])) 
     print("The total number of items are " + str(total) + ".")
     print("The average price is $" + str(average) + ".")
 
