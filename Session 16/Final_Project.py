@@ -3,6 +3,7 @@
 
 import urllib.request
 import xml.etree.ElementTree
+import numpy as np
 
 
 def input_xml():
@@ -40,13 +41,29 @@ def test_xml(source):
         exit(1)
 
 
-def output_xml(source, total):
+def process_xml(source, total):
     test = []
     for key in source.keys():
         test.append(source[key])
-    print(test)
+    dollars = (test[4])
+    dollars = [peso.replace('$', '').replace(' ', '') for peso in dollars]
+    dollars = np.array(dollars,float)
+    average = sum(dollars) / len(dollars)
+    average = round(average, 2)
+    return average
 
 
-source = input_xml()
-total = test_xml(source)
-output_xml(source, total)
+def output_xml(source, total, average):
+    tacos = 
+    print("The total number of items are " + str(total) + ".")
+    print("The average price is $" + str(average) + ".")
+
+
+def main():
+    source = input_xml()
+    total = test_xml(source)
+    average = process_xml(source, total)
+    output_xml(source, total, average)
+
+
+main()
